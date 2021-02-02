@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <title>Google maps</title>
+</head>
+<body>
+
+<section class="gm">
+  <div class="gm__container custom-container">
+
+    <div class="gm__left-nav">
+      <span class="gm__left-layout"></span>
+      <div class="gm__left-nav__inner">
+
+        <div class="gm__left_select-wrapper">
+
+          <div class="gm__left_select-custom js-selectCustom">
+            <div class="gm__left_select-custom-trigger">Выбирите город</div>
+            <div class="gm__left_select-custom-options">
+              <div class="gm__left_select-custom-option"
+                   data-value="kiev">Киев
+              </div>
+              <div class="gm__left_select-custom-option"
+                   data-value="kharkov">Харьков
+              </div>
+              <div class="gm__left_select-custom-option"
+                   data-value="odessa">Одесса
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gm__left-input_wrapper">
+          <span class="gm__left-input_search"></span>
+          <input type="text"
+                 id="search"
+                 placeholder="Поиск"
+                 class="gm__left-input">
+        </div>
+
+        <div class="gm__address-navbar"
+             id="address"></div>
+      </div>
+    </div>
+
+    <div class="gm__right-map" id="map">
+    </div>
+  </div>
+</section>
+
+<script src="../index.js"></script>
+</body>
+</html>

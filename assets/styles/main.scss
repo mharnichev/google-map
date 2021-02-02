@@ -1,0 +1,17 @@
+@import "normalizestyles";
+@import "variables";
+@import "index";
+@import "selector";
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+// custom classes
+.custom-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}

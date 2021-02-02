@@ -1,0 +1,89 @@
+.gm__left_select {
+    &-wrapper {
+      position: relative;
+      z-index: 10;
+    }
+
+  &-custom {
+    position: relative;
+    max-width: 320px;
+    height: 48px;
+    font-size: 16px;
+    width: 100%;
+    margin: 22px auto 14px;
+
+    &-trigger {
+      font-size: 16px;
+      background-color: #F2F2F2;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 0.7rem 0.8rem;
+      z-index: 10;
+      position: relative;
+
+      &::after {
+        content: "";
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0.5L8 7.5L1 0.5' stroke='black' stroke-width='1.4'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 16px;
+        height: 8px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+        transition: all 0.4s ease-out;
+        right: 0.8rem;
+      }
+    }
+
+    &-options {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      border-radius: 0 0 4px 4px;
+      background-color: #fff;
+      z-index: 1;
+      box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.25);
+      display: none;
+    }
+
+    &-option {
+      position: relative;
+      padding: 0.8rem;
+      color: #000000;
+
+      &:hover {
+        background-color: #F2F2F2;
+
+        &:last-of-type {
+          border-radius: 0 0 6px 6px;
+        }
+      }
+    }
+  }
+}
+
+.gm__left_select-custom.js-selectCustom.isActive {
+  .gm__left_select-custom-trigger {
+    border-radius: 4px 4px 0 0;
+  }
+
+  .gm__left_select-custom-trigger::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.gm__left_select-custom.isActive .gm__left_select-custom-options {
+  display: block;
+  cursor: pointer;
+}
+
+.gm__left_select-custom-option:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0.8rem;
+  width: calc(100% - 1.6rem);
+}
